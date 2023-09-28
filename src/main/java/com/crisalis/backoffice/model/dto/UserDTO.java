@@ -1,5 +1,6 @@
 package com.crisalis.backoffice.model.dto;
 
+import com.crisalis.backoffice.model.UserRol;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
@@ -15,6 +16,7 @@ public class UserDTO {
     private String name;
     @JsonProperty("password")
     private String password;
-
+    @JsonProperty("rol")
+    private UserRol rol;
 
 }

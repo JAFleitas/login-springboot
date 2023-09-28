@@ -59,9 +59,8 @@ public class UserService {
 
     private Boolean checkUserDTO(UserDTO userDTO, Boolean isForLogin){
         if(!isForLogin){
-            if(StringUtils.isEmpty(userDTO.getName())){
-                throw new EmptyElementException("Name is empty");
-            }
+            if(StringUtils.isEmpty(userDTO.getName())) throw new EmptyElementException("Name is empty");
+            if(userDTO.getRol() == null) throw new EmptyElementException("Rol is empty");
         }
         if(StringUtils.isEmpty(userDTO.getUsername())){
             throw new EmptyElementException("Username is empty");

@@ -29,10 +29,14 @@ public class User{
     @Column(name = "name")
     private String name;
 
+    @Column(name = "rol")
+    private UserRol rol;
+
     public User (UserDTO userDTO){
         this.name = userDTO.getName();
         this.username = userDTO.getUsername();
         this.password = userDTO.getPassword();
+        this.rol = userDTO.getRol();
     }
 
     public UserDTO toUserDTO(){
