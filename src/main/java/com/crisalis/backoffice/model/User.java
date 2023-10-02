@@ -39,6 +39,7 @@ public class User{
         this.rol = userDTO.getRol();
     }
 
+
     public UserDTO toUserDTO(){
         return UserDTO
                 .builder()
